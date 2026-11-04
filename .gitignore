@@ -1,0 +1,14 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+.env.local
+coverage
+playwright-report
+test-results
+*.tsbuildinfo
+src/routeTree.gen.ts
+.DS_Store
+.tanstack/
+.agents/
