@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 10% 9%;
+    --foreground: 40 20% 93%;
+
+    --card: 230 10% 12%;
+    --card-foreground: 40 20% 93%;
+
+    --border: 230 9% 21%;
+    --input: 230 9% 23%;
+
+    --muted: 230 9% 16%;
+    --muted-foreground: 36 8% 63%;
+
+    --primary: 38 55% 58%;
+    --primary-foreground: 38 45% 10%;
+
+    --secondary: 230 9% 18%;
+    --secondary-foreground: 40 20% 93%;
+
+    --accent: 230 9% 18%;
+    --accent-foreground: 40 20% 93%;
+
+    --destructive: 6 62% 58%;
+    --destructive-foreground: 40 20% 97%;
+
+    --success: 160 35% 45%;
+    --success-foreground: 40 20% 97%;
+
+    --ring: 38 55% 58%;
+    --radius: 0.5rem;
+
+    --font-sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "cv11", "ss01";
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
